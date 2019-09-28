@@ -1,5 +1,11 @@
 # @lleon/object-builders
 
+[![npm (scoped)](https://img.shields.io/npm/v/@lleon/object-builders)](https://www.npmjs.com/package/@lleon/object-builders)
+[![Travis (.org)](https://img.shields.io/travis/leon19/node-object-builders)](https://travis-ci.org/leon19/node-object-builders)
+[![Coverage Status](https://coveralls.io/repos/github/leon19/node-object-builders/badge.svg?branch=master)](https://coveralls.io/github/leon19/node-object-builders?branch=master)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 Library to easily create object builders, useful for testing or for generating seed data.
 
 This library requires
@@ -29,10 +35,6 @@ yarn add @lleon/object-builders
 # or using npm...
 npm install @lleon/object-builders
 ```
-
-The project use [husky](https://github.com/typicode/husky) and
-[lint-staged](https://github.com/okonet/lint-staged) for linting and fixing possible errors on
-source code before commit
 
 ### fromInterface()
 
@@ -164,6 +166,9 @@ code > 0 on error
 - **\*.spec.ts**
 
 ### yarn cover
+
+> For some reason this script does not work when used with `yarn` so it is needed to launch with npm
+> `npm run cover`
 
 The same as as `yarn test` and generates coverages reports in `reports/coverage`. Exit with code > 0
 on error
