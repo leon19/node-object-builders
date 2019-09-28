@@ -1,6 +1,6 @@
 {
   "name": "@lleon/object-builders",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Utilities for building shaped objects and classes",
   "main": "lib/index.js",
   "module": "esm/index.js",
