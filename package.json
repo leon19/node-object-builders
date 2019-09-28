@@ -27,6 +27,9 @@
   "engines": {
     "node": ">=10"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {},
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.4",
