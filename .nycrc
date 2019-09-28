@@ -1,17 +1,18 @@
 {
   "include": [
-    "src/**/*.ts"
+    "src"
   ],
   "extension": [
     ".ts"
   ],
   "exclude": [
     "**/*.d.ts",
-    "lib/**",
-    "esm/**",
-    "lib/**/*.test.ts",
-    "tests/**",
-    "node_modules/**"
+    "lib",
+    "esm",
+    "tests",
+    "src/**/*.spec.ts",
+    "src/types",
+    "src/**/index.ts"
   ],
   "reporter": [
     "clover",
