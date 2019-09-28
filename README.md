@@ -7,13 +7,13 @@ This library requires
 to work. So be sure your browser or the node version you're using supports proxies.
 
 - [Installation](#installation)
-  - [fromInterface()](#frominterface--)
-  - [fromClassObject()](#fromclassobject--)
-  - [fromClassConstructor()](#fromclassconstructor--)
-  - [fromFactory()](#fromfactory--)
+  - [fromInterface()](#frominterface)
+  - [fromClassObject()](#fromclassobject)
+  - [fromClassConstructor()](#fromclassconstructor)
+  - [fromFactory()](#fromfactory)
 - [Development](#development)
+  - [yarn build](#yarn-build)
   - [yarn build:commonjs](#yarn-build-commonjs)
-  - [yarn build:commonjs](#yarn-build-commonjs-1)
   - [yarn build:esm](#yarn-build-esm)
   - [yarn clean](#yarn-clean)
   - [yarn test](#yarn-test)
@@ -62,11 +62,11 @@ never called.
 
 This is a good builder when using in conjunction with
 [class-transformer](https://www.npmjs.com/package/class-transformer) and
-[class-validators](https://www.npmjs.com/package/class-validator)
+[class-validator](https://www.npmjs.com/package/class-validator)
 
 ```ts
 import { fromClassObject } from '@lleon/object-builders';
-import { IsString } from 'class-validators';
+import { IsString } from 'class-validator';
 
 class User {
   @IsString()
@@ -157,8 +157,8 @@ Remove the following directories/files
 
 ### yarn test
 
-Run tests files inside the `tests` and `src` folders that matches the following patterns. Exit with code > 0 on
-error
+Run tests files inside the `tests` and `src` folders that matches the following patterns. Exit with
+code > 0 on error
 
 - **\*.test.ts**
 - **\*.spec.ts**
