@@ -37,7 +37,7 @@ describe('lazy()', () => {
     const lazyTest = lazy(() => Test);
     expect(() => {
       new lazyTest();
-    }).to.throw(ReferenceError, "Cannot access 'Test' before initialization");
+    }).to.throw(ReferenceError);
 
     const testPropertyValue = 'test';
 
