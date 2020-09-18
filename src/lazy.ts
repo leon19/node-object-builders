@@ -42,7 +42,7 @@
  * @param lazyConstructor
  */
 export function lazy<T extends object, Args extends any[], Class extends { new (...args: Args): T }>(lazyConstructor: () => Class): Class {
-  const lazyClass: Class = function(...args: Args) {
+  const lazyClass: Class = function (...args: Args) {
     const ctor = lazyConstructor();
 
     return new ctor(...args);

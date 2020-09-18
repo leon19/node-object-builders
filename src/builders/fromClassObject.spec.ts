@@ -18,9 +18,7 @@ describe('fromClassObject()', () => {
   describe('#get()', () => {
     it('should return a plain object with the set properties', () => {
       const value = 'foo';
-      const test = getTestBuilder()
-        .testProperty.set(value)
-        .get();
+      const test = getTestBuilder().testProperty.set(value).get();
 
       expect(test).to.not.be.instanceOf(Test);
       expect(test.testProperty).to.be.equal(value);
@@ -30,9 +28,7 @@ describe('fromClassObject()', () => {
   describe('#build()', () => {
     it('should return a class instance with the set properties', () => {
       const value = 'foo';
-      const test = getTestBuilder()
-        .testProperty.set(value)
-        .build();
+      const test = getTestBuilder().testProperty.set(value).build();
 
       expect(test).to.be.instanceOf(Test);
       expect(test.testProperty).to.be.equal(value);

@@ -26,9 +26,7 @@ describe('fromFactory()', () => {
   describe('#get()', () => {
     it('should return a plain object with the set properties', () => {
       const value = 'foo';
-      const test = getTestBuilder()
-        .testInputProperty.set(value)
-        .get();
+      const test = getTestBuilder().testInputProperty.set(value).get();
 
       expect(test).to.not.be.instanceOf(TestResult);
       expect(test.testInputProperty).to.be.equal(value);

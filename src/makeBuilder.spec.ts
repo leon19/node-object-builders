@@ -53,9 +53,7 @@ describe('makeBuilder()', () => {
 
   it('should include the property when set', () => {
     const value = 'test';
-    const test = getTestBuilder()
-      .testProperty.set(value)
-      .build();
+    const test = getTestBuilder().testProperty.set(value).build();
 
     expect(test.testProperty).to.be.equal(value);
   });
@@ -63,9 +61,7 @@ describe('makeBuilder()', () => {
   it('should include the property when it is set to undefined', () => {
     const property: keyof Test = 'testProperty';
 
-    const test = getTestBuilder()
-      .testProperty.set(undefined)
-      .build();
+    const test = getTestBuilder().testProperty.set(undefined).build();
 
     expect(test).to.have.property(property).and.is.undefined;
   });
@@ -74,19 +70,14 @@ describe('makeBuilder()', () => {
     const value = 'test';
     const property: keyof Test = 'testProperty';
 
-    const test = getTestBuilder()
-      .testProperty.set(value)
-      .testProperty.unset()
-      .build();
+    const test = getTestBuilder().testProperty.set(value).testProperty.unset().build();
 
     expect(test).to.not.have.property(property);
   });
 
   it('should able to set a "build" property', () => {
     const value = 1;
-    const builder = getTestBuildBuilder()
-      .build.set(value)
-      .build();
+    const builder = getTestBuildBuilder().build.set(value).build();
 
     expect(builder.build).to.be.equal(value);
   });
@@ -94,19 +85,14 @@ describe('makeBuilder()', () => {
   it('should be able to unset a "build" property', () => {
     const property: keyof TestBuild = 'build';
     const value = 1;
-    const builder = getTestBuildBuilder()
-      .build.set(value)
-      .build.unset()
-      .build();
+    const builder = getTestBuildBuilder().build.set(value).build.unset().build();
 
     expect(builder).to.not.have.property(property);
   });
 
   it('should able to set a "get" property', () => {
     const value = true;
-    const builder = getTestGetBuilder()
-      .get.set(value)
-      .build();
+    const builder = getTestGetBuilder().get.set(value).build();
 
     expect(builder.get).to.be.equal(value);
   });
@@ -114,10 +100,7 @@ describe('makeBuilder()', () => {
   it('should be able to unset a "get" property', () => {
     const property: keyof TestGet = 'get';
     const value = false;
-    const builder = getTestGetBuilder()
-      .get.set(value)
-      .get.unset()
-      .build();
+    const builder = getTestGetBuilder().get.set(value).get.unset().build();
 
     expect(builder).to.not.have.property(property);
   });
