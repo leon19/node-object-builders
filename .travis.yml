@@ -2,16 +2,15 @@ language: node_js
 
 node_js:
   - lts/*
+  - '15'
   - '12'
-  - '11'
-  - '10'
 
 script:
   - yarn build
   - npm run cover
 
 env:
-  - COVERAGE_RUN_ON_NODE_VERSION=12
+  - COVERAGE_RUN_ON_NODE_VERSION=14
 
 after_success: >
   node -e 'process.exit(process.version.replace(/^v(\d+).*?$/, "$1") === process.env.COVERAGE_RUN_ON_NODE_VERSION ? 0 : 1)' \
