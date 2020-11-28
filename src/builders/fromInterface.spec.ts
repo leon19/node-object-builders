@@ -16,7 +16,7 @@ describe('fromInterface()', () => {
   });
 
   it('get and build should return the same object', () => {
-    const builder = getTestBuilder().testProperty.set('foo');
+    const builder = getTestBuilder().setTestProperty('foo');
 
     expect(builder.get()).to.be.deep.equal(builder.build());
   });

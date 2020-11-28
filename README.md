@@ -47,9 +47,7 @@ interface User {
   name: string;
 }
 
-const user = fromInterface<User>()
-  .name.set('John')
-  .build();
+const user = fromInterface<User>().setName('John').build();
 
 console.log(user.name); // prints "John"
 ```
@@ -57,7 +55,7 @@ console.log(user.name); // prints "John"
 ### fromClassObject()
 
 Creates a new object builder from the given class. The properties that can be set are the same
-properties as the class has.
+properties as the class has excluding methods.
 
 When using this builder object is instantiated using `Object.create` so the function constructor is
 never called.
@@ -75,9 +73,7 @@ class User {
   name!: string;
 }
 
-const user = fromClassObject(User)
-  .name.set('John')
-  .build();
+const user = fromClassObject(User).setName('John').build();
 
 console.log(user instanceof User); // prints `true`
 console.log(user.name); // prints "John"
@@ -102,10 +98,7 @@ class User {
 }
 
 // the available builder properties are the properties that receives the constructor
-const user = fromClassConstructor(User)
-  .firstName.set('John')
-  .lastName.set('Doe')
-  .build();
+const user = fromClassConstructor(User).setFirstName('John').setLastName('Doe').build();
 
 console.log(user instanceof User); // prints `true`
 console.log(user.givenName); // prints "John"
@@ -124,9 +117,7 @@ const factory = (properties: Partial<{ userName: string }>): string => {
   return properties.userName || '';
 };
 
-const userName = fromFactory(factory)
-  .userName.set('john.doe1')
-  .build();
+const userName = fromFactory(factory).setUserName('john.doe1').build();
 
 console.log(userName === 'john.doe1'); // prints `true`
 ```

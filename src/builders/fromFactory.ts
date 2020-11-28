@@ -1,5 +1,5 @@
-import { makeBuilder } from '../makeBuilder';
 import { Builder } from '../types/Builder';
+import { makeBuilder } from '../makeBuilder';
 
 export function fromFactory<Properties extends object, Result>(
   factory: (properties: Partial<Properties>) => Result

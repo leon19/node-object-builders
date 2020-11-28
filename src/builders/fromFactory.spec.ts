@@ -26,7 +26,7 @@ describe('fromFactory()', () => {
   describe('#get()', () => {
     it('should return a plain object with the set properties', () => {
       const value = 'foo';
-      const test = getTestBuilder().testInputProperty.set(value).get();
+      const test = getTestBuilder().setTestInputProperty(value).get();
 
       expect(test).to.not.be.instanceOf(TestResult);
       expect(test.testInputProperty).to.be.equal(value);
@@ -36,7 +36,7 @@ describe('fromFactory()', () => {
   describe('#build()', () => {
     it('should return a class instance with the set properties', () => {
       const value = 'foo';
-      const builder = getTestBuilder().testInputProperty.set(value);
+      const builder = getTestBuilder().setTestInputProperty(value);
       const test = builder.build();
 
       verify(spiedFactory.factory(deepEqual(builder.get()))).once();
