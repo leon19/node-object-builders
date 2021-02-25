@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/leon19/node-object-builders/compare/v2.0.0...v2.0.1) (2021-02-25)
+
+
+### Bug Fixes
+
+* exclude methods from class properties ([6d34147](https://github.com/leon19/node-object-builders/commit/6d34147c150cfefffa7a093d39c6b4cc52f2e9ff))
+
 # [2.0.0](https://github.com/leon19/node-object-builders/compare/v1.0.0...v2.0.0) (2020-11-28)
 
 
