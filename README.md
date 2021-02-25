@@ -1,7 +1,7 @@
 # @lleon/object-builders
 
 [![npm (scoped)](https://img.shields.io/npm/v/@lleon/object-builders)](https://www.npmjs.com/package/@lleon/object-builders)
-[![Travis (.org)](https://img.shields.io/travis/leon19/node-object-builders)](https://travis-ci.org/leon19/node-object-builders)
+![Test](https://github.com/leon19/node-object-builders/actions/workflows/test.yml/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/leon19/node-object-builders/badge.svg?branch=master)](https://coveralls.io/github/leon19/node-object-builders?branch=master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
