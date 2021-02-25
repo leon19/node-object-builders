@@ -1,3 +1,5 @@
+import { NonMethodKeys } from './Builder';
+
 export type ClassProperties<T extends object> = {
-  [K in keyof T]?: T[K];
+  [K in NonMethodKeys<T>]?: T[K];
 };
